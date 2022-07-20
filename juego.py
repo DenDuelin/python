@@ -1,12 +1,15 @@
 from random import randint
 
 import random
+
 numAl = random.randint(1, 10)
 print(numAl)
 
 def main ():
-    numero = int(input("Ingresa un numero del 1 al 10: "))
-    comparar(numero, numAl)
+        numero = input("Ingresa un numero del 1 al 10: ")
+        while not numero.isdigit():
+            numero = input("No has ingresado un número, intentálo de nuevo.")
+        comparar(int(numero), numAl)
 
 def comparar(n1, n2):
     if n1 > n2:
